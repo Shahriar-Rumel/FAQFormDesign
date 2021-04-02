@@ -1,0 +1,119 @@
+body{
+    margin:0;
+    padding: 0;
+    background: rgba(221, 187, 143, 0.609);
+    font-family:Marvel,sans-serif;
+}
+nav{
+    background-color:rgb(101, 108, 112);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:60px;
+}
+nav img{
+    max-width:40px;
+}
+
+.faq-cover{
+    
+    width: 100%;
+    margin-top: 30px;
+}
+
+.faq{
+    background-color:rgb(101, 108, 112);
+    margin-left:50%;
+    transform: translateX(-50%);
+    width:80%;
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom:15px;
+    color:rgb(236, 221, 9);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.faq.active::before,.faq.active::after{
+  content :'\f075';
+  font-family: "Font Awesome 5 Free";
+  font-size:90px;
+  position: absolute;
+  color: rgba(11, 253, 173, 0.096);
+}
+.faq.active::before{
+    top:-10px;
+    left:0px;
+  }
+.faq.active::after{
+    bottom:-10px;
+    right:0px;
+}
+
+
+button{
+    height:20px;
+    width:50px;
+    background-color: transparent;
+    border:0;
+    cursor: pointer;
+    position: absolute;
+    top:30px;
+    right:20px;
+    z-index:1;
+}
+button:focus{
+    outline:none;
+}
+.toggle .fa-chevron-down{
+    position: relative;
+    color:rgb(238, 236, 236);
+    font-size: 18px;
+    display:block;
+}
+.toggle .fa-times{
+    position: relative;
+    color:rgb(255, 255, 255);
+    font-size: 18px;
+    display: none;
+   
+}
+
+
+
+.faq.active .faq-ans{
+    display: block;
+}
+.faq .faq-ans{
+    display: none;
+}
+
+.faq.active .toggle .fa-chevron-down{
+    display:none;
+}
+.faq.active .toggle .fa-times{
+    display:block;
+}
+.fa-lightbulb{
+    margin-right:10px;
+}
+.fa-users{
+    margin-right:5px;
+}
+.faq-ans{
+    margin-left: 10px;
+    color:rgb(235, 241, 241);
+}
+
+@media(min-width:700px){
+    .faq{
+      
+        width:600px;
+      
+    }
+    
+}
